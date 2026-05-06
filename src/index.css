@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-ted-red: #eb0028;
+  --color-void-black: #050505;
+}
+
+@layer base {
+  body {
+    @apply bg-void-black text-white antialiased selection:bg-ted-red selection:text-white;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply border border-white/10 bg-white/5 backdrop-blur-2xl;
+  }
+  
+  .text-rail {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
